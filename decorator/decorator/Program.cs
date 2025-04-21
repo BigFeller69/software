@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Client c = new();
+
+            ConcreteComponent comp = new();
+            c.ClientCode(comp);
+            
+
+            ConcreteDecorator1 dec1 = new(comp);
+
+            c.ClientCode(dec1);
         }
     }
 }
