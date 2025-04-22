@@ -10,12 +10,13 @@ namespace decorator
     {
         public SugarDecorator(ICoffee coffee) : base(coffee)
         {
-            Price = coffee.Price + 0.2;
+            Cost = 0.2;
+            Price = coffee.Price + Cost;
         }
 
-        public override string GetCoffeeType()
+        public override string GetCoffee()
         {
-            string coffee = base.GetCoffeeType();
+            string coffee = base.GetCoffee();
             coffee += "\nwith sugar";
             return coffee;
         }

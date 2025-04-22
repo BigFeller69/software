@@ -11,11 +11,12 @@ namespace decorator
     {
         public MilkDecorator(ICoffee coffee) : base(coffee)
         {
-            Price = coffee.Price + 0.5;
+            Cost = 0.5;
+            Price = coffee.Price + Cost;
         }
-        public override string GetCoffeeType()
+        public override string GetCoffee()
         {
-            string coffee = base.GetCoffeeType();
+            string coffee = base.GetCoffee();
             coffee += "\nwith milk";
             return coffee;
         }

@@ -9,6 +9,7 @@ namespace decorator
     public interface ICoffee
     {
         double Price { get; set; }
-        string GetCoffeeType();
+        double Cost { get; set; }
+        string GetCoffee();
     }
 }

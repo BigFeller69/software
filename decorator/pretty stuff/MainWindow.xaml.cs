@@ -36,11 +36,6 @@ public partial class MainWindow : Window
         }
         MessageBox.Show(_coffee.ToString());
         _coffee = new Coffee();
-
-
-
-
-
     }
 
 }

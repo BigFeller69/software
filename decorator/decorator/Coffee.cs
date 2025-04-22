@@ -9,6 +9,12 @@ namespace decorator
 {
     public class Coffee : ICoffee
     {
+        private double _cost = 1.0;
+        public double Cost
+        {
+            get => _cost;
+            set => _cost = value;
+        }
         private double _price;
         public double Price
         {
@@ -17,11 +23,15 @@ namespace decorator
         }
         public Coffee()
         {
-            Price = 1.0;
+            Price = Cost;
         }
-        public string GetCoffeeType()
+        public string GetCoffee()
         {
             return "coffee";
+        }
+        public override string ToString()
+        {
+            return $"{this.GetCoffee()}  {Price}";
         }
     }
 }
