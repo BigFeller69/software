@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace decorator
 {
-    class ConcreteComponent : Component
+    public interface ICoffee
     {
-        public override string Thing()
-        {
-            return "0 ";
-        }
+        string GetCoffeeType();
     }
 }

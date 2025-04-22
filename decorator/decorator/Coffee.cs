@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace decorator
 {
-    class Client
+    public class Coffee : ICoffee
     {
-        public void ClientCode(Component comp)
+        public string GetCoffeeType()
         {
-            Console.WriteLine(comp.Thing());
+            return "coffee";
         }
     }
 }
