@@ -8,6 +8,7 @@ namespace decorator
 {
     public interface ICoffee
     {
+        double Price { get; set; }
         string GetCoffeeType();
     }
 }

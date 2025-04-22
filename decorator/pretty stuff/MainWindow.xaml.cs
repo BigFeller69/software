@@ -34,8 +34,13 @@ public partial class MainWindow : Window
         {
             _coffee = new MilkDecorator(_coffee);
         }
-        MessageBox.Show(_coffee.GetCoffeeType());
+        MessageBox.Show(_coffee.ToString());
         _coffee = new Coffee();
+
+
+
+
+
     }
 
 }

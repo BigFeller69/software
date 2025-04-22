@@ -10,7 +10,7 @@ namespace decorator
     {
         public SugarDecorator(ICoffee coffee) : base(coffee)
         {
-            
+            Price = coffee.Price + 0.2;
         }
 
         public override string GetCoffeeType()

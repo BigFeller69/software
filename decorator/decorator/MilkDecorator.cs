@@ -11,7 +11,7 @@ namespace decorator
     {
         public MilkDecorator(ICoffee coffee) : base(coffee)
         {
-            
+            Price = coffee.Price + 0.5;
         }
         public override string GetCoffeeType()
         {
@@ -19,5 +19,6 @@ namespace decorator
             coffee += "\nwith milk";
             return coffee;
         }
+        
     }
 }

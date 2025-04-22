@@ -5,9 +5,9 @@
         static void Main(string[] args)
         {
             ICoffee coffee = new Coffee();
-            ICoffee milkDecorator = new MilkDecorator(coffee);
-            ICoffee sugarDecorator = new SugarDecorator(milkDecorator);
-            Console.WriteLine(sugarDecorator.GetCoffeeType());
+            coffee = new SugarDecorator(coffee);
+            coffee = new MilkDecorator(coffee);
+            Console.WriteLine(coffee.ToString());
         }
     }
 }

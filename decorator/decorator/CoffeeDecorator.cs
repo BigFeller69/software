@@ -8,6 +8,13 @@ namespace decorator
 {
     public class CoffeeDecorator : ICoffee
     {
+
+        private double _price;
+        public double Price
+        {
+            get => _price;
+            set => _price = value;
+        }
         private ICoffee _coffee;
         public CoffeeDecorator(ICoffee coffee)
         {
@@ -16,6 +23,11 @@ namespace decorator
         public virtual string GetCoffeeType()
         {
             return _coffee.GetCoffeeType();
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetCoffeeType()} {Price}";
         }
     }
 }
